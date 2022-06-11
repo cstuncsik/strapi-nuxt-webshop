@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "license": "MIT",
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "scripts": {
+    "build": "strapi build",
+    "dev": "strapi develop",
+    "dev-db": "docker-compose -f docker-compose.postgres.yml up -d",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-graphql": "4.2.0-beta.4",
+    "@strapi/plugin-i18n": "4.2.0-beta.4",
+    "@strapi/plugin-users-permissions": "4.2.0-beta.4",
+    "@strapi/strapi": "4.2.0-beta.4",
+    "pg": "8.6.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "0c96ff41-454b-440c-a9c4-fc2660f736c7"
+  }
+}

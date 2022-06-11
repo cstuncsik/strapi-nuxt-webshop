@@ -2,25 +2,30 @@
   "name": "strapi-nuxt-webshop",
   "version": "0.0.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "nohoist": ["**/*/**"]
+  },
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
-  "devDependencies": {
-    "eslint-config-custom": "latest",
-    "prettier": "latest",
-    "turbo": "latest"
-  },
-  "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=14.0.0"
+    "lint": "turbo run lint --parallel",
+    "test": "turbo run test --parallel"
   },
   "dependencies": {},
-  "packageManager": "yarn@1.22.18"
+  "devDependencies": {
+    "turbo": "^1.2.16"
+  },
+  "packageManager": "yarn@1.22.18",
+  "engines": {
+    "node": ">=16.0.0",
+    "yarn": ">=1.22.0"
+  },
+  "volta": {
+    "node": "16.15.1",
+    "yarn": "1.22.19"
+  }
 }
