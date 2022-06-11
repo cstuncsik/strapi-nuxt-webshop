@@ -52,7 +52,10 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: {
-      postcssOptions: require('./postcss.config.js'),
+      plugins: {
+        'postcss-preset-env': {},
+        cssnano: {}
+      }
     },
   },
 }
